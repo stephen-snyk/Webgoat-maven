@@ -1,0 +1,7 @@
+FROM snyk/snyk:maven
+COPY . /Users/stephen/Documents/Webgoat
+WORKDIR /Users/stephen/Documents/Webgoat
+#RUN gradle build --no-daemon 
+
+CMD ["snyk", "test", "--all-projects", "--json"]
+
